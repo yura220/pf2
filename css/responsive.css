@@ -1,0 +1,19 @@
+/*  mobile버전 768이하  */
+@media screen and (max-width:768px){
+  
+  header div.wrap nav{
+  padding: 0 15px;
+  }
+  
+  header div.wrap .gnb{
+    
+  display: none;
+  }
+  header div.wrap .etc{
+    
+  display: none;
+  }
+  
+  
+/*  end  */
+}

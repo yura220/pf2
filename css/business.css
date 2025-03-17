@@ -1,0 +1,44 @@
+main {
+
+}
+
+#business {
+  background-image: linear-gradient(to left, rgba(0,0,0,0) 40%, rgba(0,0,0,0.6)), url(../img/business_bg1.jpg);
+  display: flex;
+  align-items: center;
+  background-size: cover;
+}
+
+#business .wrap {
+
+}
+
+#business .wrap h2.hide {
+
+}
+
+#business .wrap ul.flex {
+
+}
+
+#business .wrap ul.flex li {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+#business .wrap ul.flex li:not(:first-child){
+  display: none;
+}
+
+#business .wrap ul.flex li h3.h1 {
+  order: 1;
+}
+
+#business .wrap ul.flex li p.p {
+  order: 3;
+}
+
+#business .wrap ul.flex li a.menu {
+  order: 2;
+  margin-bottom: 26px;
+}

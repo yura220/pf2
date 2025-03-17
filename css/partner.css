@@ -1,0 +1,34 @@
+#partner {
+  background-image: linear-gradient(-25deg, rgba(255,255,252,0) 94.9%, #0597db 95%, rgba(5,151,219,0.8) 100%), url(../img/orchestra.jpg);
+  display: flex;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  animation-name: colorside;
+  animation-duration: 1s;
+}
+@keyframes colorside{
+  from{
+    background-position-left : 0%, center;
+  }
+  to{
+    background-position-left : 100%, center;
+    
+  }
+}
+#partner .wrap {
+  gap: 35px;
+}
+#partner .wrap h2 {
+  
+}
+#partner .wrap h3 {
+  
+}
+#partner .wrap p {
+  
+}
+#partner .wrap a {
+  
+  margin-top: 70px;
+}
