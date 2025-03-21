@@ -1,89 +1,90 @@
 /* 타이틀 영역 */
-div#title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  /*! background-image: linear-gradient(to right bottom, #00d084,#0693e3); */
-  position: relative;
+#title {
+    background-color: #4a4646;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
 }
-div#title::after {
-  content:"";
-  display: block;
-  width: 100%;
-  height: 379px;
-  background-image: url(../img/svg/wave2.svg);
-  background-size: cover;
-  position: absolute;
-  bottom: 0;
-  background-repeat: no-repeat;
-  background-position-y: 10px;
-  opacity: 0;
+#title::after{
+    content: "";
+    display: block;
+    width:100%;
+    height: 379px;
+    background-image: url(../img/svg/wave2.svg);
+    background-size: cover;
+    background-position-y: 10px;
+    background-repeat: no-repeat;  
+    position: absolute;
+    opacity: 0;
 }
 /* 메인 텍스트 */
-div#title div.wrap{
-  
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: 1fr 1fr;
-  position: relative;
-  z-index: 1;
-}
-div#title div.wrap h2.h1 {
-  grid-column: 1;
-  grid-row: 1;
-  align-self: end;
-  color: white;
-}
-div#title div.wrap p.titlep {
-  grid-column: 1;
-  grid-row: 2;
-  color: white;
+#title .wrap{
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 1fr;
 }
 
-/* 네비게이션 */
-div#title div.wrap nav {
-  grid-column: 2;
-  grid-row: 1 / span 2;
+#title h2.h1 {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+    word-spacing: 7px;
 }
-div#title div.wrap nav ul {
+#title h2.h1 span{
+    display: none;
 }
-div#title div.wrap nav ul li {
-  width: 150px;
-  height: 150px;
-  border: 1px solid;
+#title .titlep {grid-column: 1;grid-row: 2;}
+
+/* 타이틀 메뉴 */
+#title nav{
+    grid-column: 2;
+    grid-row: 1 / span 2;
 }
-div#title div.wrap nav ul li a {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  gap: 6px;
+#title nav ul {
+
 }
-div#title div.wrap nav ul li a::before{
-  content:"";
-  width: 50px;
-  display: block;
-  height: 50px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  /*! transform: translateY(-4px); */
+
+#title nav ul li {
+    width: 150px;height: 150px;border: 1px solid #000;
+}
+
+#title nav ul li a {
+    display: block;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+#title nav ul li a::before{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(-4px);
 }
 div#title div.wrap nav ul li:nth-child(1) a::before{
-  background-image: url(../img/svg/building_icon.svg);
-}
-div#title div.wrap nav ul li:nth-child(2) a::before{
-  background-image: url(../img/svg/increase_icon.svg);
-}
-div#title div.wrap nav ul li:nth-child(3) a::before{
-  background-image: url(../img/svg/balance_icon.svg);
-}
-div#title div.wrap nav ul li:nth-child(4) a::before{
-  background-image: url(../img/svg/id_card_icon.svg);
-}
-div#title div.wrap nav ul li a::after{
+    background-image: url(../img/svg/building_icon.svg);
+  }
+  div#title div.wrap nav ul li:nth-child(2) a::before{
+    background-image: url(../img/svg/increase_icon.svg);
+  }
+  div#title div.wrap nav ul li:nth-child(3) a::before{
+    background-image: url(../img/svg/balance_icon.svg);
+  }
+  div#title div.wrap nav ul li:nth-child(4) a::before{
+    background-image: url(../img/svg/id_card_icon.svg);
+  }
+#title nav ul li a::after{
   content:"";
   background-image: url(../img/svg/chevron-right-solid.svg);
   display: block;
@@ -96,23 +97,20 @@ div#title div.wrap nav ul li a::after{
   background-size: 30%;
 }
 div#title div.wrap nav ul li a:hover{
-  
-  background-image: linear-gradient(to left top,#2B32B2,#1488CC);
+    background-image: linear-gradient(to left top,#2B32B2,#1488CC);
+  }
+#title nav ul li h2.menu {
+    
 }
-/* 메뉴 스타일 */
-div#title div.wrap nav ul li a h2.menu {
-  color: white;
+#title nav ul li p{
+    display: none;
 }
-div#title div.wrap nav ul li a p.sm {
-  display: none;
+#title video{
+    position: absolute;
+    left: 0;
+    top: 0;
 }
-
-/* 비디오 */
-div#title video{
-  
-  position: absolute;
-  /*! width: 100%; */
-  z-index: -1;
-  overflow: hidden;
-  /*! height: 100%; */
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    #title nav ul {}
 }

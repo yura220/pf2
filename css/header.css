@@ -1,45 +1,33 @@
+/* 기본 스타일 */
+header .wrap {}
+
 /* 헤더 영역 */
 header {
-  width: 100%;
-  position: absolute;
-  z-index: 2;
-  border-bottom: 1px solid #dfdfdf;
-}
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    border-bottom: 1px solid #dfdfdf;}
 @media screen and (min-width:769px){
-  header:hover{
-  background-color: white;
-}
-}
-header div.wrap {
+    header:hover{
+        background-color: white;
+    }
 }
 
-/* 내비게이션 영역 */
-header div.wrap nav {
-  align-items: center;
-  height: 90px;
-}
+header nav {height: 90px; align-items: center;}
 
-header div.wrap nav div.flex {
-}
-header div.wrap nav div.flex-between {
-}
+header h1 {}
 
-/* 로고 스타일 */
-header div.wrap nav h1 {
-}
-header div.wrap nav h1 a {
-}
-header div.wrap nav h1 a img {
-}
+header h1 a {}
 
-/* 메뉴 스타일 */
-header div.wrap nav ul.gnb {
-  height: 100%;
-}
-header div.wrap nav ul.gnb li {
-}
+header h1 img {}
+
+/* GNB 메뉴 스타일 */
+header .gnb {height: 100%;}
+
+header .gnb li {}
+
 header div.wrap nav ul.gnb li a {
-  padding: 0 50px;
+    padding: 0 50px;
   height: calc(100% - 3px);
   display: flex;
   align-items: center;
@@ -47,45 +35,43 @@ header div.wrap nav ul.gnb li a {
   border-bottom: 4px solid transparent;
 }
 header:hover div.wrap nav ul.gnb li a{
-  color:black;
-}
-header div.wrap nav ul.gnb li a:hover{
-  border-bottom: 4px solid #0598db;
-  color: #0598db;
-}
-header div.wrap nav ul.submenu {
-  display: none;
-  position: absolute;
-  top: 120px;
-}
-header div.wrap nav ul.submenu li {
-}
-header div.wrap nav ul.submenu li a {
-  
-  color: black;
-}
+    color:black;
+  }
+  header div.wrap nav ul.gnb li a:hover{
+    border-bottom: 4px solid #0598db;
+    color: #0598db;
+  }
 
-/* 기타 링크 스타일 */
-header div.wrap nav ul.etc {
+header .gnb .submenu {
+    display: none;
+    position: absolute;
+    top: 120px;
 }
+header .gnb .submenu li {}
+
+header .gnb .submenu a {color: black;}
+
+/* 기타 메뉴 */
+header .etc {}
 header div.wrap nav ul.etc li {
-  position: relative;
-}
-header div.wrap nav ul.etc li:nth-child(1)::after{
-  content:"●";
-  font-size: 5px;
-  position: absolute;
-  right: -2px;
-  top: calc(50% - 2px);
-  color: rgba(255,255,255,0.7);
-}
-header:hover div.wrap nav ul.etc li:nth-child(1)::after{
-  color:gray;
-}
-header div.wrap nav ul.etc li a {
-  padding: 0 15px;
-}
-header:hover div.wrap nav ul.etc li a{
-  color:black;
-  transition: 0.3s;
-}
+    position: relative;
+  }
+  header div.wrap nav ul.etc li:nth-child(1)::after{
+    content:"●";
+    font-size: 5px;
+    position: absolute;
+    right: -2px;
+    top: calc(50% - 2px);
+    color: rgba(255,255,255,0.7);
+  }
+  header:hover div.wrap nav ul.etc li:nth-child(1)::after{
+    color:gray;
+  }
+  header div.wrap nav ul.etc li a {
+    padding: 0 15px;
+  }
+  header:hover div.wrap nav ul.etc li a{
+    color:black;
+    transition: 0.3s;
+  }
+

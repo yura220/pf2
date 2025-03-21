@@ -1,7 +1,3 @@
-main {
-
-}
-
 #business {
   background-image: linear-gradient(to left, rgba(0,0,0,0) 40%, rgba(0,0,0,0.6)), url(../img/business_bg1.jpg);
   display: flex;
@@ -10,15 +6,15 @@ main {
 }
 
 #business .wrap {
-
 }
 
-#business .wrap h2.hide {
-
+#business h2.hide {
 }
 
-#business .wrap ul.flex {
+#business ul.flex {
+}
 
+#business ul {
 }
 
 #business .wrap ul.flex li {

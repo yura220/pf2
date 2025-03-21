@@ -3,23 +3,15 @@
 #news .wrap {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto 1fr 220px;
-  width: 1280px;
-  justify-content: space-between;
-  gap: 40px;
+  grid-template-rows: auto 1fr auto;
+  gap: 20px;
 }
 #news .h2 {
   grid-column: 1;
   grid-row: 1;
 }
 #news .h2::before{
-  content:"";
-  background-image: url(../img/icon_bar3.png);
-  display: block;
-  width: 40px;
-  height: 11px;
-  background-size: contain;
-  background-repeat: no-repeat;
+  filter: invert(1);
 }
 #news .p {
   grid-column: 1;
@@ -32,16 +24,14 @@
   grid-column: 2 / span 2;
   grid-row: 1 / span 2;
   height: 310px;
-  background-image: linear-gradient(#0006 14%,#fff0 63%),url(../img/67cfcc1a650a6.jpg);
-  background-size: cover;
-  background-position: center;
+  background-color: #ccc;
 }
 #news article:nth-of-type(2){
   
   grid-column: 4;
   grid-row: 1 / span 2;
   background-color: #0081c4;
-  border-radius: 0 0 100px 0;
+  border-radius: 0 0 70px 0;
 }
 #news article:nth-of-type(n+3){
   height: 220px;
@@ -55,7 +45,6 @@
   grid-column: 3;
   grid-row: 3;
   border: 1px solid #ccc;
-  height: calc(100% - 2px);
 }
 #news article:nth-of-type(4){
   grid-column: 2;
@@ -73,19 +62,23 @@
   justify-content: space-between;
   height: 100%;
 }
+#news article:nth-of-type(1) a {
+  background-image: linear-gradient(#0006 41%,#fff0 63%),url(../img/ceo.jpg);
+  background-size: cover;
+  background-position: center;
+}
 #news article h3 {
-  font-weight: 600;
 }
 #news article:nth-of-type(-n+3) h3{
   color: white;
 }
-#news article:nth-of-type(n+2):nth-of-type(-n+4) h3{
-  font-weight: bolder;
-}
-#news article time {
+#news article:nth-of-type(n+2):nth-of-type(-n+3) h3{
+  font-weight: bold; 
 }
 #news article:nth-of-type(-n+3) time{
-  color: white;
+  color: #e7e4e4;
+}
+#news article time {
 }
 #news div.sns {
   grid-column: 4;
@@ -98,50 +91,56 @@
   gap: 25px;
 }
 #news div.sns h3 {
-  
   border-bottom: 1px solid #ddd;
   margin-bottom: 25px;
   padding-bottom: 20px;
 }
-#news div.sns h3.line{
-  font-weight: 600;
-}
 #news div.sns ul {
-  /*! justify-content: space-between; */
+  gap: 13px;
 }
 #news div.sns ul li {
-  margin-right: 20px;
 }
 #news div.sns ul li h4 {
-  transform: translateY(-10px);
+  margin-bottom: 10px;
+  margin-top: -10px;
 }
 #news div.sns ul li span {
+  font-size: 0;
   display: flex;
   justify-content: center;
   gap: 5px;
+  /*! flex-wrap: wrap; */
 }
-#news div.sns ul li span a{
-  
-  background-size: contain;
-  font-size: 0;
-  display: inline-block;
-  width: 25px;
+#news div.sns ul li span a {
+  width: 21px;
   height: 25px;
+  /*! background-color: #ccc; */
+  display: inline-block;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  flex-grow: 1;
+  flex-basis: 37px;
 }
-#news div.sns ul li span a.facebook {
-  background-image: url(../img/svg/sns/facebook_icon.svg);
+#news div.sns ul li:nth-child(1) span a:nth-child(1){
+  background-image: url(../img/svg/sns/facebook.svg);
 }
-#news div.sns ul li span a.blog{
+#news div.sns ul li:nth-child(1) span a:nth-child(2){
   background-image: url(../img/sns_blog.png);
 }
-#news div.sns ul li span a.cafe{
+#news div.sns ul li:nth-child(1) span a:nth-child(3){
+  background-image: url(../img/svg/sns/instagram.svg);
+}
+
+#news div.sns ul li:nth-child(2) span a:nth-child(1){
+  background-image: url(../img/svg/sns/facebook.svg);
+}
+
+#news div.sns ul li:nth-child(2) span a:nth-child(2){
   background-image: url(../img/sns_cafe.png);
 }
-#news div.sns ul li span a.instagram{
-  background-image: url(../img/svg/sns/instagram_icon.svg);
+
+#news div.sns ul li:nth-child(3) span a:nth-child(1){
+  background-image: url(../img/svg/sns/video.svg);
 }
-#news div.sns ul li span a.utube{
-  background-image: url(../img/svg/sns/utube_icon.svg);
-}
+
