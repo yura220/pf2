@@ -20,6 +20,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <script src="js/jquery-3.7.1.js"></script>
+    <!-- <script src="js/header.js"></script> -->
+    <script>
+        $(document).ready(function(){
+            //메뉴애니
+            $("header div.wrap nav ul.gnb li a").hover(
+                function(){
+                    $(this).addClass("border100");
+                },
+                function(){
+                    $(this).removeClass("border100");
+                });
+
+        //end
+        });
+    </script>
 </head>
 <body>
     <!-- 상단영역 -->
