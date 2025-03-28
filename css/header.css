@@ -27,18 +27,32 @@ header .gnb {height: 100%;}
 header .gnb li {}
 
 header div.wrap nav ul.gnb li a {
-    padding: 0 50px;
-  height: calc(100% - 3px);
+  padding: 0 50px;
+  height: 100%;
   display: flex;
   align-items: center;
   transition: 0.5s;
-  border-bottom: 4px solid transparent;
+  position: relative;
+}
+header div.wrap nav ul.gnb li a::after{
+  content:"";
+  display: block;
+  /*! border-bottom: 4px solid #0598db; */
+  position: absolute;
+  width: 0%;
+  bottom: -1px;
+  height: 4px;
+  background-color: #0598db;
+  left: 0;
+  transition: 0.3s;
+}
+.border100::after{
+  width: 100% !important;;
 }
 header:hover div.wrap nav ul.gnb li a{
     color:black;
   }
   header div.wrap nav ul.gnb li a:hover{
-    border-bottom: 4px solid #0598db;
     color: #0598db;
   }
 
